@@ -21,6 +21,7 @@ public class Timer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		secRemaining -= Time.deltaTime;
 		TimeSpan timespan = TimeSpan.FromSeconds(secRemaining);
 		myText.text = string.Format ("{0:D2}:{1:D2}", timespan.Minutes, timespan.Seconds);
 	}
